@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>No component_map.json</title>
+  <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>No component_map.json found</h1>
+    <p>Put <code>component_map.json</code> into <code>./oran_orchestrator_work/</code> or run the orchestrator prepare first.</p>
+    <p>Files found in work dir:</p>
+    <pre>{{ (os.listdir('.')[:50])|join('\n') }}</pre>
+  </main>
+</body>
+</html>
+

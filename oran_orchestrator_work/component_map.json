@@ -1,0 +1,2489 @@
+{
+  "generated_at": 1760666098,
+  "generator": "mapping.map_virtual_components",
+  "inventory_snapshot": {
+    "hosts": [
+      {
+        "name": "oran_host_local",
+        "ip": "10.0.2.15",
+        "roles": [
+          "core",
+          "gnb",
+          "ue_emulator",
+          "ric"
+        ],
+        "ssh_port": 22,
+        "local_api": true
+      }
+    ]
+  },
+  "netns_info": {},
+  "derived_gateways": [],
+  "service_ports": {
+    "mongod": [
+      {
+        "ip": "0.0.0.0",
+        "port": 27017,
+        "proto": "tcp",
+        "process": "mongod",
+        "pid": 1524,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "mongod",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-mmed": [
+      {
+        "ip": "127.0.0.2",
+        "port": 9090,
+        "proto": "tcp",
+        "process": "open5gs-mmed",
+        "pid": 23823,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-mmed",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.2",
+        "port": 5868,
+        "proto": "tcp",
+        "process": "open5gs-mmed",
+        "pid": 23823,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-mmed",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.2",
+        "port": 3868,
+        "proto": "tcp",
+        "process": "open5gs-mmed",
+        "pid": 23823,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-mmed",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.2",
+        "port": 2123,
+        "proto": "udp",
+        "process": "open5gs-mmed",
+        "pid": 23823,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-mmed"
+      }
+    ],
+    "open5gs-pcrfd": [
+      {
+        "ip": "127.0.0.9",
+        "port": 3868,
+        "proto": "tcp",
+        "process": "open5gs-pcrfd",
+        "pid": 23959,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-pcrfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.9",
+        "port": 5868,
+        "proto": "tcp",
+        "process": "open5gs-pcrfd",
+        "pid": 23959,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-pcrfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.9",
+        "port": 9090,
+        "proto": "tcp",
+        "process": "open5gs-pcrfd",
+        "pid": 23959,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-pcrfd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-smfd": [
+      {
+        "ip": "127.0.0.4",
+        "port": 5868,
+        "proto": "tcp",
+        "process": "open5gs-smfd",
+        "pid": 23843,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-smfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 9090,
+        "proto": "tcp",
+        "process": "open5gs-smfd",
+        "pid": 23843,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-smfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-smfd",
+        "pid": 23843,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-smfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 3868,
+        "proto": "tcp",
+        "process": "open5gs-smfd",
+        "pid": 23843,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-smfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 8805,
+        "proto": "udp",
+        "process": "open5gs-smfd",
+        "pid": 23843,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-smfd"
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 2123,
+        "proto": "udp",
+        "process": "open5gs-smfd",
+        "pid": 23843,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-smfd"
+      },
+      {
+        "ip": "127.0.0.4",
+        "port": 2152,
+        "proto": "udp",
+        "process": "open5gs-smfd",
+        "pid": 23843,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-smfd"
+      }
+    ],
+    "open5gs-amfd": [
+      {
+        "ip": "127.0.0.5",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-amfd",
+        "pid": 23885,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-amfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.5",
+        "port": 9090,
+        "proto": "tcp",
+        "process": "open5gs-amfd",
+        "pid": 23885,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-amfd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-pcfd": [
+      {
+        "ip": "127.0.0.13",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-pcfd",
+        "pid": 24086,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-pcfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.13",
+        "port": 9090,
+        "proto": "tcp",
+        "process": "open5gs-pcfd",
+        "pid": 24086,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-pcfd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-hssd": [
+      {
+        "ip": "127.0.0.8",
+        "port": 3868,
+        "proto": "tcp",
+        "process": "open5gs-hssd",
+        "pid": 23945,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-hssd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.8",
+        "port": 9090,
+        "proto": "tcp",
+        "process": "open5gs-hssd",
+        "pid": 23945,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-hssd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.8",
+        "port": 5868,
+        "proto": "tcp",
+        "process": "open5gs-hssd",
+        "pid": 23945,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-hssd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-ausfd": [
+      {
+        "ip": "127.0.0.11",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-ausfd",
+        "pid": 24068,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-ausfd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-bsfd": [
+      {
+        "ip": "127.0.0.15",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-bsfd",
+        "pid": 24105,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-bsfd",
+        "observed_by_probe": true
+      }
+    ],
+    "systemd-resolved": [
+      {
+        "ip": "127.0.0.54",
+        "port": 53,
+        "proto": "tcp",
+        "process": "systemd-resolve",
+        "pid": 475,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "systemd-resolved",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.54",
+        "port": 53,
+        "proto": "udp",
+        "process": "systemd-resolve",
+        "pid": 475,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "systemd-resolved"
+      }
+    ],
+    "cupsd": [
+      {
+        "ip": "127.0.0.1",
+        "port": 631,
+        "proto": "tcp",
+        "process": "cupsd",
+        "pid": 7035,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "cupsd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "::1",
+        "port": 631,
+        "proto": "tcp",
+        "process": "cupsd",
+        "pid": 7035,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "cupsd",
+        "observed_by_probe": false
+      }
+    ],
+    "open5gs-upfd": [
+      {
+        "ip": "127.0.0.7",
+        "port": 9090,
+        "proto": "tcp",
+        "process": "open5gs-upfd",
+        "pid": 23910,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-upfd",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.7",
+        "port": 8805,
+        "proto": "udp",
+        "process": "open5gs-upfd",
+        "pid": 23910,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-upfd"
+      },
+      {
+        "ip": "127.0.0.7",
+        "port": 2152,
+        "proto": "udp",
+        "process": "open5gs-upfd",
+        "pid": 23910,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-upfd"
+      }
+    ],
+    "open5gs-udrd": [
+      {
+        "ip": "127.0.0.20",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-udrd",
+        "pid": 24114,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-udrd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-scpd": [
+      {
+        "ip": "127.0.0.200",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-scpd",
+        "pid": 24059,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-scpd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-udmd": [
+      {
+        "ip": "127.0.0.12",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-udmd",
+        "pid": 24077,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-udmd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-nssfd": [
+      {
+        "ip": "127.0.0.14",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-nssfd",
+        "pid": 24096,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-nssfd",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-nrfd": [
+      {
+        "ip": "127.0.0.10",
+        "port": 7777,
+        "proto": "tcp",
+        "process": "open5gs-nrfd",
+        "pid": 24017,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-nrfd",
+        "observed_by_probe": true
+      }
+    ],
+    "node": [
+      {
+        "ip": "127.0.0.1",
+        "port": 9999,
+        "proto": "tcp",
+        "process": "node",
+        "pid": 23809,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "node",
+        "observed_by_probe": true
+      }
+    ],
+    "nr-softmodem": [
+      {
+        "ip": "0.0.0.0",
+        "port": 4043,
+        "proto": "tcp",
+        "process": "nr-softmodem",
+        "pid": 24734,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "nr-softmodem",
+        "observed_by_probe": true
+      },
+      {
+        "ip": "127.0.0.1",
+        "port": 2152,
+        "proto": "udp",
+        "process": "nr-softmodem",
+        "pid": 24734,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "nr-softmodem"
+      }
+    ],
+    "iperf3": [
+      {
+        "ip": "0.0.0.0",
+        "port": 5201,
+        "proto": "tcp",
+        "process": "iperf3",
+        "pid": 1495,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "iperf3",
+        "observed_by_probe": true
+      }
+    ],
+    "open5gs-sgwud": [
+      {
+        "ip": "127.0.0.6",
+        "port": 8805,
+        "proto": "udp",
+        "process": "open5gs-sgwud",
+        "pid": 23893,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-sgwud"
+      },
+      {
+        "ip": "127.0.0.6",
+        "port": 2152,
+        "proto": "udp",
+        "process": "open5gs-sgwud",
+        "pid": 23893,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-sgwud"
+      }
+    ],
+    "open5gs-sgwcd": [
+      {
+        "ip": "127.0.0.3",
+        "port": 8805,
+        "proto": "udp",
+        "process": "open5gs-sgwcd",
+        "pid": 23835,
+        "source": "ss-listener",
+        "observed_in_sniff": true,
+        "host": "open5gs-sgwcd"
+      },
+      {
+        "ip": "127.0.0.3",
+        "port": 2123,
+        "proto": "udp",
+        "process": "open5gs-sgwcd",
+        "pid": 23835,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "open5gs-sgwcd"
+      }
+    ],
+    "avahi-daemon:": [
+      {
+        "ip": "0.0.0.0",
+        "port": 5353,
+        "proto": "udp",
+        "process": "avahi-daemon",
+        "pid": 742,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "avahi-daemon:"
+      },
+      {
+        "ip": "0.0.0.0",
+        "port": 52155,
+        "proto": "udp",
+        "process": "avahi-daemon",
+        "pid": 742,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "avahi-daemon:"
+      },
+      {
+        "ip": "::",
+        "port": 5353,
+        "proto": "udp",
+        "process": "avahi-daemon",
+        "pid": 742,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "avahi-daemon:"
+      },
+      {
+        "ip": "::",
+        "port": 53064,
+        "proto": "udp",
+        "process": "avahi-daemon",
+        "pid": 742,
+        "source": "ss-listener",
+        "observed_in_sniff": false,
+        "host": "avahi-daemon:"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "pid-1524",
+      "name": "mongod",
+      "pid": 1524,
+      "cmdline": "/usr/bin/mongod --config /etc/mongod/mongod.conf",
+      "exe": "/usr/bin/mongod",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "0.0.0.0",
+          "port": 27017,
+          "proto": "tcp",
+          "process": "mongod",
+          "pid": 1524,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096         0.0.0.0:27017      0.0.0.0:*    users:((\"mongod\",pid=1524,fd=11))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.1",
+          "sport": 47038,
+          "dport": 27017,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.1",
+          "sport": 58704,
+          "dport": 27017,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.1",
+          "sport": 58714,
+          "dport": 27017,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.1",
+          "sport": 47072,
+          "dport": 27017,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-23823",
+      "name": "open5gs-mmed",
+      "pid": 23823,
+      "cmdline": "./open5gs/install/bin/open5gs-mmed -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/mme.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-mmed",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.2",
+          "port": 9090,
+          "proto": "tcp",
+          "process": "open5gs-mmed",
+          "pid": 23823,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096       127.0.0.2:9090       0.0.0.0:*    users:((\"open5gs-mmed\",pid=23823,fd=7))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.2",
+          "port": 5868,
+          "proto": "tcp",
+          "process": "open5gs-mmed",
+          "pid": 23823,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.2:5868       0.0.0.0:*    users:((\"open5gs-mmed\",pid=23823,fd=13))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.2",
+          "port": 3868,
+          "proto": "tcp",
+          "process": "open5gs-mmed",
+          "pid": 23823,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.2:3868       0.0.0.0:*    users:((\"open5gs-mmed\",pid=23823,fd=11))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.2",
+          "port": 2123,
+          "proto": "udp",
+          "process": "open5gs-mmed",
+          "pid": 23823,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.2:2123       0.0.0.0:*    users:((\"open5gs-mmed\",pid=23823,fd=15))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 4
+    },
+    {
+      "id": "pid-23959",
+      "name": "open5gs-pcrfd",
+      "pid": 23959,
+      "cmdline": "./open5gs/install/bin/open5gs-pcrfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/pcrf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-pcrfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.9",
+          "port": 3868,
+          "proto": "tcp",
+          "process": "open5gs-pcrfd",
+          "pid": 23959,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.9:3868       0.0.0.0:*    users:((\"open5gs-pcrfd\",pid=23959,fd=13))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.9",
+          "port": 5868,
+          "proto": "tcp",
+          "process": "open5gs-pcrfd",
+          "pid": 23959,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.9:5868       0.0.0.0:*    users:((\"open5gs-pcrfd\",pid=23959,fd=15))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.9",
+          "port": 9090,
+          "proto": "tcp",
+          "process": "open5gs-pcrfd",
+          "pid": 23959,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096       127.0.0.9:9090       0.0.0.0:*    users:((\"open5gs-pcrfd\",pid=23959,fd=7))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 3
+    },
+    {
+      "id": "pid-23843",
+      "name": "open5gs-smfd",
+      "pid": 23843,
+      "cmdline": "./open5gs/install/bin/open5gs-smfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/smf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-smfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.4",
+          "port": 5868,
+          "proto": "tcp",
+          "process": "open5gs-smfd",
+          "pid": 23843,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.4:5868       0.0.0.0:*    users:((\"open5gs-smfd\",pid=23843,fd=13))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.4",
+          "port": 9090,
+          "proto": "tcp",
+          "process": "open5gs-smfd",
+          "pid": 23843,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096       127.0.0.4:9090       0.0.0.0:*    users:((\"open5gs-smfd\",pid=23843,fd=9))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.4",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-smfd",
+          "pid": 23843,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.4:7777       0.0.0.0:*    users:((\"open5gs-smfd\",pid=23843,fd=17))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.4",
+          "port": 3868,
+          "proto": "tcp",
+          "process": "open5gs-smfd",
+          "pid": 23843,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.4:3868       0.0.0.0:*    users:((\"open5gs-smfd\",pid=23843,fd=12))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.4",
+          "port": 8805,
+          "proto": "udp",
+          "process": "open5gs-smfd",
+          "pid": 23843,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.4:8805       0.0.0.0:*    users:((\"open5gs-smfd\",pid=23843,fd=16))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.4",
+          "port": 2123,
+          "proto": "udp",
+          "process": "open5gs-smfd",
+          "pid": 23843,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.4:2123       0.0.0.0:*    users:((\"open5gs-smfd\",pid=23843,fd=14))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.4",
+          "port": 2152,
+          "proto": "udp",
+          "process": "open5gs-smfd",
+          "pid": 23843,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.4:2152       0.0.0.0:*    users:((\"open5gs-smfd\",pid=23843,fd=15))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.3",
+          "dst": "127.0.0.6",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.6",
+          "dst": "127.0.0.3",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.4",
+          "dst": "127.0.0.7",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.7",
+          "dst": "127.0.0.4",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 7
+    },
+    {
+      "id": "pid-23885",
+      "name": "open5gs-amfd",
+      "pid": 23885,
+      "cmdline": "./open5gs/install/bin/open5gs-amfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/amf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-amfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.5",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-amfd",
+          "pid": 23885,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.5:7777       0.0.0.0:*    users:((\"open5gs-amfd\",pid=23885,fd=10))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.5",
+          "port": 9090,
+          "proto": "tcp",
+          "process": "open5gs-amfd",
+          "pid": 23885,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096       127.0.0.5:9090       0.0.0.0:*    users:((\"open5gs-amfd\",pid=23885,fd=9))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 2
+    },
+    {
+      "id": "pid-24086",
+      "name": "open5gs-pcfd",
+      "pid": 24086,
+      "cmdline": "./open5gs/install/bin/open5gs-pcfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/pcf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-pcfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.13",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-pcfd",
+          "pid": 24086,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5         127.0.0.13:7777       0.0.0.0:*    users:((\"open5gs-pcfd\",pid=24086,fd=11))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.13",
+          "port": 9090,
+          "proto": "tcp",
+          "process": "open5gs-pcfd",
+          "pid": 24086,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096      127.0.0.13:9090       0.0.0.0:*    users:((\"open5gs-pcfd\",pid=24086,fd=9))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 2
+    },
+    {
+      "id": "pid-23945",
+      "name": "open5gs-hssd",
+      "pid": 23945,
+      "cmdline": "./open5gs/install/bin/open5gs-hssd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/hss.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-hssd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.8",
+          "port": 3868,
+          "proto": "tcp",
+          "process": "open5gs-hssd",
+          "pid": 23945,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.8:3868       0.0.0.0:*    users:((\"open5gs-hssd\",pid=23945,fd=12))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.8",
+          "port": 9090,
+          "proto": "tcp",
+          "process": "open5gs-hssd",
+          "pid": 23945,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096       127.0.0.8:9090       0.0.0.0:*    users:((\"open5gs-hssd\",pid=23945,fd=7))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.8",
+          "port": 5868,
+          "proto": "tcp",
+          "process": "open5gs-hssd",
+          "pid": 23945,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5          127.0.0.8:5868       0.0.0.0:*    users:((\"open5gs-hssd\",pid=23945,fd=13))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 3
+    },
+    {
+      "id": "pid-24068",
+      "name": "open5gs-ausfd",
+      "pid": 24068,
+      "cmdline": "./open5gs/install/bin/open5gs-ausfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/ausf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-ausfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.11",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-ausfd",
+          "pid": 24068,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5         127.0.0.11:7777       0.0.0.0:*    users:((\"open5gs-ausfd\",pid=24068,fd=8))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-24105",
+      "name": "open5gs-bsfd",
+      "pid": 24105,
+      "cmdline": "./open5gs/install/bin/open5gs-bsfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/bsf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-bsfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.15",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-bsfd",
+          "pid": 24105,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5         127.0.0.15:7777       0.0.0.0:*    users:((\"open5gs-bsfd\",pid=24105,fd=8))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-475",
+      "name": "systemd-resolved",
+      "pid": 475,
+      "cmdline": "/usr/lib/systemd/systemd-resolved",
+      "exe": "/usr/lib/systemd/systemd-resolved",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.54",
+          "port": 53,
+          "proto": "tcp",
+          "process": "systemd-resolve",
+          "pid": 475,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=475,fd=17))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.54",
+          "port": 53,
+          "proto": "udp",
+          "process": "systemd-resolve",
+          "pid": 475,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0         127.0.0.54:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=475,fd=16))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 2
+    },
+    {
+      "id": "pid-7035",
+      "name": "cupsd",
+      "pid": 7035,
+      "cmdline": "/usr/sbin/cupsd -l",
+      "exe": "/usr/sbin/cupsd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.1",
+          "port": 631,
+          "proto": "tcp",
+          "process": "cupsd",
+          "pid": 7035,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096       127.0.0.1:631        0.0.0.0:*    users:((\"cupsd\",pid=7035,fd=7))"
+        },
+        {
+          "host": null,
+          "ip": "::1",
+          "port": 631,
+          "proto": "tcp",
+          "process": "cupsd",
+          "pid": 7035,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096           [::1]:631           [::]:*    users:((\"cupsd\",pid=7035,fd=6))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 2
+    },
+    {
+      "id": "pid-23910",
+      "name": "open5gs-upfd",
+      "pid": 23910,
+      "cmdline": "./open5gs/install/bin/open5gs-upfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/upf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-upfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.7",
+          "port": 9090,
+          "proto": "tcp",
+          "process": "open5gs-upfd",
+          "pid": 23910,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096       127.0.0.7:9090       0.0.0.0:*    users:((\"open5gs-upfd\",pid=23910,fd=7))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.7",
+          "port": 8805,
+          "proto": "udp",
+          "process": "open5gs-upfd",
+          "pid": 23910,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.7:8805       0.0.0.0:*    users:((\"open5gs-upfd\",pid=23910,fd=8))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.7",
+          "port": 2152,
+          "proto": "udp",
+          "process": "open5gs-upfd",
+          "pid": 23910,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.7:2152       0.0.0.0:*    users:((\"open5gs-upfd\",pid=23910,fd=9))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.3",
+          "dst": "127.0.0.6",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.6",
+          "dst": "127.0.0.3",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.4",
+          "dst": "127.0.0.7",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.7",
+          "dst": "127.0.0.4",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 3
+    },
+    {
+      "id": "pid-24114",
+      "name": "open5gs-udrd",
+      "pid": 24114,
+      "cmdline": "./open5gs/install/bin/open5gs-udrd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/udr.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-udrd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.20",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-udrd",
+          "pid": 24114,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5         127.0.0.20:7777       0.0.0.0:*    users:((\"open5gs-udrd\",pid=24114,fd=9))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-24059",
+      "name": "open5gs-scpd",
+      "pid": 24059,
+      "cmdline": "./open5gs/install/bin/open5gs-scpd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/scp.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-scpd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.200",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-scpd",
+          "pid": 24059,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5        127.0.0.200:7777       0.0.0.0:*    users:((\"open5gs-scpd\",pid=24059,fd=8))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-24077",
+      "name": "open5gs-udmd",
+      "pid": 24077,
+      "cmdline": "./open5gs/install/bin/open5gs-udmd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/udm.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-udmd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.12",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-udmd",
+          "pid": 24077,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5         127.0.0.12:7777       0.0.0.0:*    users:((\"open5gs-udmd\",pid=24077,fd=8))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-24096",
+      "name": "open5gs-nssfd",
+      "pid": 24096,
+      "cmdline": "./open5gs/install/bin/open5gs-nssfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/nssf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-nssfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.14",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-nssfd",
+          "pid": 24096,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5         127.0.0.14:7777       0.0.0.0:*    users:((\"open5gs-nssfd\",pid=24096,fd=8))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-24017",
+      "name": "open5gs-nrfd",
+      "pid": 24017,
+      "cmdline": "./open5gs/install/bin/open5gs-nrfd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/nrf.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-nrfd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.10",
+          "port": 7777,
+          "proto": "tcp",
+          "process": "open5gs-nrfd",
+          "pid": 24017,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5         127.0.0.10:7777       0.0.0.0:*    users:((\"open5gs-nrfd\",pid=24017,fd=6))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.10",
+          "sport": 53636,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54942,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54948,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54954,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54956,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54978,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 54972,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33772,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.1",
+          "dst": "127.0.0.200",
+          "sport": 33774,
+          "dport": 7777,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-23809",
+      "name": "node",
+      "pid": 23809,
+      "cmdline": "/usr/bin/node server/index.js",
+      "exe": "/usr/bin/node",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.1",
+          "port": 9999,
+          "proto": "tcp",
+          "process": "node",
+          "pid": 23809,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      511        127.0.0.1:9999       0.0.0.0:*    users:((\"node\",pid=23809,fd=22))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-24734",
+      "name": "nr-softmodem",
+      "pid": 24734,
+      "cmdline": "./nr-softmodem -O /home/testbed/O-RAN-Testbed-Automation/OpenAirInterface_Testbed/Next_Generation_Node_B/configs/gnb.conf --rfsim --rfsimulator.serveraddr server --rfsimulator.options chanmod --gNBs.[0].min_rxtxtime 6",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/OpenAirInterface_Testbed/User_Equipment/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "0.0.0.0",
+          "port": 4043,
+          "proto": "tcp",
+          "process": "nr-softmodem",
+          "pid": 24734,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      5                  *:4043             *:*    users:((\"nr-softmodem\",pid=24734,fd=101))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.1",
+          "port": 2152,
+          "proto": "udp",
+          "process": "nr-softmodem",
+          "pid": 24734,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.1:2152       0.0.0.0:*    users:((\"nr-softmodem\",pid=24734,fd=95))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "10.201.1.2",
+          "dst": "10.0.2.15",
+          "sport": 55942,
+          "dport": 4043,
+          "proto": "tcp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 2
+    },
+    {
+      "id": "pid-1495",
+      "name": "iperf3",
+      "pid": 1495,
+      "cmdline": "/usr/bin/iperf3 --server --interval 0",
+      "exe": "/usr/bin/iperf3",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "0.0.0.0",
+          "port": 5201,
+          "proto": "tcp",
+          "process": "iperf3",
+          "pid": 1495,
+          "source": "ss-listener",
+          "raw": "LISTEN 0      4096               *:5201             *:*    users:((\"iperf3\",pid=1495,fd=3))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 1
+    },
+    {
+      "id": "pid-23893",
+      "name": "open5gs-sgwud",
+      "pid": 23893,
+      "cmdline": "./open5gs/install/bin/open5gs-sgwud -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/sgwu.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-sgwud",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.6",
+          "port": 8805,
+          "proto": "udp",
+          "process": "open5gs-sgwud",
+          "pid": 23893,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.6:8805       0.0.0.0:*    users:((\"open5gs-sgwud\",pid=23893,fd=6))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.6",
+          "port": 2152,
+          "proto": "udp",
+          "process": "open5gs-sgwud",
+          "pid": 23893,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.6:2152       0.0.0.0:*    users:((\"open5gs-sgwud\",pid=23893,fd=7))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.3",
+          "dst": "127.0.0.6",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.6",
+          "dst": "127.0.0.3",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.4",
+          "dst": "127.0.0.7",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.7",
+          "dst": "127.0.0.4",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 2
+    },
+    {
+      "id": "pid-23835",
+      "name": "open5gs-sgwcd",
+      "pid": 23835,
+      "cmdline": "./open5gs/install/bin/open5gs-sgwcd -c /home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/configs/sgwc.yaml",
+      "exe": "/home/testbed/O-RAN-Testbed-Automation/5G_Core_Network/open5gs/install/bin/open5gs-sgwcd",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "127.0.0.3",
+          "port": 8805,
+          "proto": "udp",
+          "process": "open5gs-sgwcd",
+          "pid": 23835,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.3:8805       0.0.0.0:*    users:((\"open5gs-sgwcd\",pid=23835,fd=7))"
+        },
+        {
+          "host": null,
+          "ip": "127.0.0.3",
+          "port": 2123,
+          "proto": "udp",
+          "process": "open5gs-sgwcd",
+          "pid": 23835,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0          127.0.0.3:2123       0.0.0.0:*    users:((\"open5gs-sgwcd\",pid=23835,fd=6))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [
+        {
+          "src": "127.0.0.3",
+          "dst": "127.0.0.6",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.6",
+          "dst": "127.0.0.3",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.4",
+          "dst": "127.0.0.7",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        },
+        {
+          "src": "127.0.0.7",
+          "dst": "127.0.0.4",
+          "sport": 8805,
+          "dport": 8805,
+          "proto": "udp",
+          "source": "sniff"
+        }
+      ],
+      "_ports_count": 2
+    },
+    {
+      "id": "pid-742",
+      "name": "avahi-daemon:",
+      "pid": 742,
+      "cmdline": "avahi-daemon: running [testbed-VirtualBox.local]",
+      "exe": "/usr/sbin/avahi-daemon",
+      "namespace_inode": 4026531840,
+      "interfaces": [
+        "v-eth1",
+        "ogstun",
+        "ogstun2",
+        "lo",
+        "enp0s3",
+        "ogstun3"
+      ],
+      "service_ports": [
+        {
+          "host": null,
+          "ip": "0.0.0.0",
+          "port": 5353,
+          "proto": "udp",
+          "process": "avahi-daemon",
+          "pid": 742,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*    users:((\"avahi-daemon\",pid=742,fd=12))"
+        },
+        {
+          "host": null,
+          "ip": "0.0.0.0",
+          "port": 52155,
+          "proto": "udp",
+          "process": "avahi-daemon",
+          "pid": 742,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0            0.0.0.0:52155      0.0.0.0:*    users:((\"avahi-daemon\",pid=742,fd=14))"
+        },
+        {
+          "host": null,
+          "ip": "::",
+          "port": 5353,
+          "proto": "udp",
+          "process": "avahi-daemon",
+          "pid": 742,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0               [::]:5353          [::]:*    users:((\"avahi-daemon\",pid=742,fd=13))"
+        },
+        {
+          "host": null,
+          "ip": "::",
+          "port": 53064,
+          "proto": "udp",
+          "process": "avahi-daemon",
+          "pid": 742,
+          "source": "ss-listener",
+          "raw": "UNCONN 0      0               [::]:53064         [::]:*    users:((\"avahi-daemon\",pid=742,fd=15))"
+        }
+      ],
+      "addresses": [],
+      "observed_flows": [],
+      "_ports_count": 4
+    }
+  ],
+  "_listeners_count": 48,
+  "_sniff_summary": {
+    "sniff_iface": "any",
+    "sniff_duration": 30,
+    "flows_captured": 32
+  },
+  "_summary": {
+    "components_count": 23,
+    "service_ports_hosts": [
+      "mongod",
+      "open5gs-mmed",
+      "open5gs-pcrfd",
+      "open5gs-smfd",
+      "open5gs-amfd",
+      "open5gs-pcfd",
+      "open5gs-hssd",
+      "open5gs-ausfd",
+      "open5gs-bsfd",
+      "systemd-resolved",
+      "cupsd",
+      "open5gs-upfd",
+      "open5gs-udrd",
+      "open5gs-scpd",
+      "open5gs-udmd",
+      "open5gs-nssfd",
+      "open5gs-nrfd",
+      "node",
+      "nr-softmodem",
+      "iperf3",
+      "open5gs-sgwud",
+      "open5gs-sgwcd",
+      "avahi-daemon:"
+    ],
+    "total_service_ports": 48
+  },
+  "_probe_summary": {
+    "probed_tcp_endpoints": 32,
+    "responsive": 31
+  }
+}

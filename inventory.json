@@ -1,0 +1,16 @@
+{
+  "hosts": [
+    {
+      "name": "oran_host_local",
+      "ip": "10.0.2.15",
+      "roles": [
+        "core",
+        "gnb",
+        "ue_emulator",
+        "ric"
+      ],
+      "ssh_port": 22,
+      "local_api": true
+    }
+  ]
+}

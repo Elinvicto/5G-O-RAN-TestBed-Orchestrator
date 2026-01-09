@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>O-RAN Component Map Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .badge { display:inline-block; padding:0.2em 0.5em; border-radius:0.25rem; font-weight:600; }
+    .badge-high { background:#e5534b; color:white; }
+    .badge-medium { background:#f6c85f; color:#2f2f2f; }
+    .badge-low { background:#6bbf59; color:white; }
+    pre.raw { max-height:120px; overflow:auto; background:#f5f5f5; padding:8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>O-RAN Component Map Dashboard</h1>
+    <p>Generated: {{ raw_cm.timestamp }}</p>
+
+    <section>
+      <h2>Risk summary</h2>
+      <canvas id="riskChart" width="400" height="120"></canvas>
+      <script>
+        const riskCounts = {{ risk_counts | tojson }};
+        const labels = Object.keys(riskCounts);
+        const data = Object.values(riskCounts);
+        const ctx = document.getElementById('riskChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'doughnut',
+          data: { labels: labels, datasets: [{ data: data }] },
+          options: { plugins: { legend: { position: 'bottom' } } }
+        });
+      </script>
+    </section>
+
+    <section>
+      <h2>Discovered Components ({{ components|length }})</h2>
+      <table>
+        <thead><tr><th>Name</th><th>PID</th><th>Namespace</th><th>Cmdline</th><th>#Ports</th></tr></thead>
+        <tbody>
+        {% for c in components %}
+          <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.pid or '-' }}</td>
+            <td>{{ c.namespace or '-' }}</td>
+            <td><pre class="raw">{{ c.cmdline or '' }}</pre></td>
+            <td>{{ (c.service_ports|length) if c.service_ports else 0 }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Service Ports ({{ ports|length }})</h2>
+      <table>
+        <thead><tr><th>Host</th><th>Port</th><th>Proto</th><th>Label</th><th>Role hint</th><th>Process</th><th>Risk</th><th>Raw</th></tr></thead>
+        <tbody>
+        {% for p in ports %}
+          <tr>
+            <td>{{ p.host }}</td>
+            <td>{{ p.port }}</td>
+            <td>{{ p.proto }}</td>
+            <td>{{ p.label }}</td>
+            <td>{{ p.role_hint }}</td>
+            <td>{{ p.process }}</td>
+            <td>
+              {% if p.risk == 'high' %}
+                <span class="badge badge-high">HIGH</span>
+              {% elif p.risk == 'medium' %}
+                <span class="badge badge-medium">MED</span>
+              {% else %}
+                <span class="badge badge-low">LOW</span>
+              {% endif %}
+            </td>
+            <td><pre class="raw">{{ p.raw }}</pre></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Raw component_map.json</h2>
+      <details><summary>Show JSON</summary><pre style="white-space:pre-wrap;max-height:400px;overflow:auto">{{ raw_cm | tojson(indent=2) }}</pre></details>
+    </section>
+
+    <footer>
+      <p><a href="/api/download">Download component_map.json</a> · <small>Local only — do not expose publicly.</small></p>
+    </footer>
+  </main>
+</body>
+</html>
+
