@@ -47,6 +47,33 @@ graph TD
 - **Data Persistence**: Stores all experiment data and metadata for downstream analysis.
 - **Reporting and Analysis**: Post-experiment tools to evaluate system resilience and generate usable results.
 
+## Docker Image: 5G Attack Orchestrator
+
+For users interested in pulling and using a Dockerized version of the **5G Attack Orchestrator**, you can pull the pre-built image from Docker Hub:
+
+```bash
+docker pull badishsec/5g-orchestrator
+```
+
+### Overview
+This Docker image provides a Python-based 5G security attack orchestrator and dashboard. It is designed to execute attack scripts and experiments against external 5G components such as Open5GS, OAI, or other simulated RAN/Core elements.
+
+The container offers:
+- A web-based dashboard
+- Scripted attack orchestration
+- Packet-level traffic generation using Scapy
+- A reproducible environment tailored for research experiments
+
+### Use Cases
+- UE flooding and signaling stress experiments
+- Security metric evaluation
+- Research artifact reproducibility
+- Control-plane testing for 5G vulnerabilities
+
+### Networking Notes
+- Use `--network host` for realistic 5G experiments.
+- Use `--cap-add=NET_ADMIN` for Scapy, raw sockets, and packet injection.
+
 ## Usage Steps
 The following steps outline how to use the 5G-O-RAN TestBed Orchestrator in your environment:
 
@@ -113,4 +140,4 @@ The **5G-O-RAN TestBed Orchestrator** represents an innovative and robust framew
 
 By enabling repeatable, parameterized experiments and baseline comparisons, the orchestrator facilitates in-depth resilience testing and stress analysis of 5G O-RAN systems. With its modular and extensible design, it supports the addition of new attack modules, telemetry collectors, and control hooks for expanded use cases.
 
-We encourage contributions and collaboration! Feel free to fork the repository, test it out, and submit pull requests to enhance its functionality further. Let’s improve the resilience of 5G networks together!
+We encourage contributions and collaboration! Feel free to fork the repository, test it out, and submit pull requests to enhance its functionality further. For users seeking convenience, the Docker image provides a ready-to-use environment for running experiments.
