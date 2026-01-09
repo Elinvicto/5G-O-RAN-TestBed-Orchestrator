@@ -1,47 +1,67 @@
 # 5G-O-RAN TestBed Orchestrator
 
 ## Description
-The **5G-O-RAN TestBed Orchestrator** is a comprehensive orchestration framework designed for the testing, deployment, and management of 5G Open RAN (O-RAN) setups. It serves as a bridge between software-defined tools, testbed environments, and network components, ensuring seamless integration and automation in 5G O-RAN development. This project is optimized for high performance and modularity, making it accessible to researchers, developers, and 5G testers alike.
+The Orchestrator directory contains the control logic used to coordinate and execute adversarial campaigns across the UE, RAN, and Core components of a 5G O-RAN testbed. It provides a unified mechanism to launch, synchronize, and terminate attack phases while continuously collecting system and network telemetry required for resilience evaluation.
+
+The orchestrator is designed to support repeatable, parameterized experiments, enabling controlled stress conditions and consistent comparison across baseline and defended configurations.
 
 ## Features
-- **5G Open RAN Compatibility**: Ensures compatibility with O-RAN specifications and standards.
-- **Automation**: Simplified deployment and management of O-RAN components.
-- **Multi-Language Support**:
-  - Primarily implemented in Python (98.4%), leveraging its simplicity and versatility.
-  - Incorporates low-level components in C, Cython, C++, and Fortran for enhanced computational efficiency.
-  - Includes JavaScript integration for front-end interaction.
-- **Extensibility**: Modular design allowing easy extension of functionalities and integration with external tools.
-- **Performance Optimizations**: Equipped with efficient computational features for real-time scenarios.
+- **Campaign-driven execution**: 
+  Defines multi-phase attack scenarios (e.g., UE attach flooding, RRC signaling storms, user-plane traffic bursts) using configuration files for reproducibility.
+
+- **Cross-plane coordination**:
+  Orchestrates adversarial activity spanning the UE, RAN, and Core planes, allowing evaluation of cascading and cross-layer effects.
+
+- **Baseline and control toggles**:
+  Supports running identical campaigns with security controls enabled or disabled (e.g., TLS, resource quotas, rate limits) to quantify resilience deltas.
+
+- **Telemetry collection and timestamping**:
+  Collects CPU, memory, signaling success rates, and throughput metrics with synchronized timestamps for recovery time and degradation analysis.
+
+- **Experiment repeatability**:
+  Enables repeated runs with configurable randomization (e.g., start offsets, intensity levels) to support statistical analysis.
+
+- **Modular and extensible design**:
+  Allows new attack modules, metrics collectors, or control hooks (e.g., RIC/A1/O1 triggers) to be added with minimal changes.
 
 ## Technical Architecture
 The architecture of the **5G-O-RAN TestBed Orchestrator** can be broken down into the following core components:
 
-1. **Orchestrator Core**: Written in Python, driving main functionalities like communication, automation, and coordination.
-2. **Low-level Performance Modules**: Developed in C, Cython, C++, and Fortran to facilitate high-performance operations and mathematical processing.
-3. **Web-based Monitoring Interface**: JavaScript components allowing real-time monitoring and dashboarding for orchestration workflows.
-4. **Modularized Interfaces**: API-driven interaction points for external tools and libraries.
-5. **Containerized Environment**: Supports Docker for deployment in diverse environments with reproducibility and scalability.
-
-### Technical Architecture Diagram
+### Technical Architecture Diagram (Orchestrated Adversarial Evaluation Framework)
 ```mermaid
 graph TD
-    A[Orchestrator Core Python] --> B[API Endpoints Modular Interfaces]
-    A --> C[Low-level Performance Modules C Cython C++ Fortran]
-    A --> D[Configuration Engine YAML JSON]
-    B --> E[External Tools Plugins]
-    B --> F[Web Monitoring Interface JavaScript]
-    A --> G[Containerized Environment Docker]
+    A[Central Orchestrator Node]
+    A --> B[Attack Control Layer]
+    A --> C[Configuration & Campaign Engine]
+    A --> D[Telemetry & Metrics Collection Layer]
+    A --> E[Control Toggle Interface]
+    A --> F[Data Persistence Layer]
+    A --> G[RIC / Management Touchpoint (Optional)]
+    G --> H[Threshold-based Alarms]
+    G --> I[Closed-loop Signaling]
+    A --> J[Analysis & Reporting Interface]
 
-    subgraph Orchestrator_Core
-        A
-        D
-    end
+    B --> B1[UE-plane Attacks: Attach Flooding, RRC Storms, Traffic Bursts]
+    B --> B2[RAN-plane Attacks: Scheduler Stress, Signaling Overload]
+    B --> B3[Core-plane Attacks: AMF/UPF Overload, Session Anomalies]
 
-    subgraph Interfaces
-        B
-        E
-        F
-    end
+    C --> C1[Attack Type, Intensity, Duration, Concurrency]
+    C --> C2[Randomization Parameters]
+    C --> C3[Baseline vs Defense Modes]
+
+    D --> D1[CPU/Memory Usage]
+    D --> D2[Signaling Success/Failure Rates]
+    D --> D3[Throughput, Latency Metrics]
+
+    E --> E1[Transport Security: TLS]
+    E --> E2[Container-level CPU/Memory Quotas]
+    E --> E3[Rate-limiting, Admission Control]
+
+    F --> F1[Experiment Logs: CSV/Parquet]
+    F --> F2[Metadata: Campaign ID, Run Number, Config Hash]
+
+    J --> J1[Compute Metrics: E_sec, T_res, Recovery Lag]
+    J --> J2[Generate Figures, Tables]
 ```
 
 ## Usage Steps
