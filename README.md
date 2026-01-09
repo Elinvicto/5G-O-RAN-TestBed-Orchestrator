@@ -33,17 +33,17 @@ graph TD
     A[Central Orchestrator Node]
     A --> B[Attack Control Layer]
     A --> C[Configuration & Campaign Engine]
-    A --> D[Telemetry & Metrics Collection Layer]
+    A --> D[Telemetry and Metrics Collection Layer]
     A --> E[Control Toggle Interface]
     A --> F[Data Persistence Layer]
-    A --> G[RIC / Management Touchpoint (Optional)]
-    G --> H[Threshold-based Alarms]
-    G --> I[Closed-loop Signaling]
-    A --> J[Analysis & Reporting Interface]
+    A --> G[RIC or Management Touchpoint]
+    G --> H[Threshold-Based Alarms]
+    G --> I[Closed-Loop Signaling]
+    A --> J[Analysis and Reporting Interface]
 
-    B --> B1[UE-plane Attacks: Attach Flooding, RRC Storms, Traffic Bursts]
-    B --> B2[RAN-plane Attacks: Scheduler Stress, Signaling Overload]
-    B --> B3[Core-plane Attacks: AMF/UPF Overload, Session Anomalies]
+    B --> B1[UE-Plane Attacks: Attach Flooding, RRC Storms, Traffic Bursts]
+    B --> B2[RAN-Plane Attacks: Scheduler Stress, Signaling Overload]
+    B --> B3[Core-Plane Attacks: AMF/UPF Overload, Session Anomalies]
 
     C --> C1[Attack Type, Intensity, Duration, Concurrency]
     C --> C2[Randomization Parameters]
@@ -54,8 +54,8 @@ graph TD
     D --> D3[Throughput, Latency Metrics]
 
     E --> E1[Transport Security: TLS]
-    E --> E2[Container-level CPU/Memory Quotas]
-    E --> E3[Rate-limiting, Admission Control]
+    E --> E2[Container-Level CPU/Memory Quotas]
+    E --> E3[Rate-Limiting, Admission Control]
 
     F --> F1[Experiment Logs: CSV/Parquet]
     F --> F2[Metadata: Campaign ID, Run Number, Config Hash]
@@ -126,6 +126,8 @@ Ensure the following software and tools are installed on your system:
    - Modify the components under `modules/` directory for adding proprietary features.
 
 ## Conclusion
-The **5G-O-RAN TestBed Orchestrator** provides a robust and scalable solution for testing and managing Open RAN environments. By combining Python's simplicity with efficient low-level modules, the project facilitates next-generation 5G research and development. Its modularity and extensibility ensure it can cater to a wide variety of deployment scenarios, making it a go-to choice for researchers and developers in the 5G domain.
+The **5G-O-RAN TestBed Orchestrator** represents an innovative and robust framework for orchestrating adversarial campaigns in 5G O-RAN testbeds. This build is specifically compatible with the **NIST 5G O-RAN** infrastructure, making it ideal for researchers and developers working within this environment.
 
-We welcome contributions! Feel free to fork, test, and submit pull requests to make O-RAN orchestration even better.
+By enabling repeatable, parameterized experiments and baseline comparisons, the orchestrator facilitates in-depth resilience testing and stress analysis of 5G O-RAN systems. With its modular and extensible design, it supports the addition of new attack modules, telemetry collectors, and control hooks for expanded use cases.
+
+We encourage contributions and collaboration! Feel free to fork the repository, test it out, and submit pull requests to enhance its functionality further. Let’s improve the resilience of 5G networks together!
