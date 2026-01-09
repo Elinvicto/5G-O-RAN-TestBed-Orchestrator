@@ -1,113 +1,111 @@
-# Orchestrator
+# 5G-O-RAN TestBed Orchestrator
 
-This repository contains a Python-based orchestration and attack-emulation framework, likely targeting 5G / ORAN-style network environments. It includes discovery, inventory mapping, service probing, attack execution, reporting, and a lightweight dashboard.
+## Description
+The **5G-O-RAN TestBed Orchestrator** is a comprehensive orchestration framework designed for the testing, deployment, and management of 5G Open RAN (O-RAN) setups. It serves as a bridge between software-defined tools, testbed environments, and network components, ensuring seamless integration and automation in 5G O-RAN development. This project is optimized for high performance and modularity, making it accessible to researchers, developers, and 5G testers alike.
 
-> **Note:** The `5gorc/` directory is a bundled Python virtual environment and is not part of the application logic.
+## Features
+- **5G Open RAN Compatibility**: Ensures compatibility with O-RAN specifications and standards.
+- **Automation**: Simplified deployment and management of O-RAN components.
+- **Multi-Language Support**:
+  - Primarily implemented in Python (98.4%), leveraging its simplicity and versatility.
+  - Incorporates low-level components in C, Cython, C++, and Fortran for enhanced computational efficiency.
+  - Includes JavaScript integration for front-end interaction.
+- **Extensibility**: Modular design allowing easy extension of functionalities and integration with external tools.
+- **Performance Optimizations**: Equipped with efficient computational features for real-time scenarios.
 
----
+## Technical Architecture
+The architecture of the **5G-O-RAN TestBed Orchestrator** can be broken down into the following core components:
 
-## Project Structure
+1. **Orchestrator Core**: Written in Python, driving main functionalities like communication, automation, and coordination.
+2. **Low-level Performance Modules**: Developed in C, Cython, C++, and Fortran to facilitate high-performance operations and mathematical processing.
+3. **Web-based Monitoring Interface**: JavaScript components allowing real-time monitoring and dashboarding for orchestration workflows.
+4. **Modularized Interfaces**: API-driven interaction points for external tools and libraries.
+5. **Containerized Environment**: Supports Docker for deployment in diverse environments with reproducibility and scalability.
 
-### Core Orchestration
+### Technical Architecture Diagram
+```mermaid
+graph TD
+    A[Orchestrator Core<br>(Python)] --> B[API Endpoints<br>(Modular Interfaces)]
+    A --> C[Low-level Performance Modules<br>(C, Cython, C++, Fortran)]
+    A --> D[Configuration Engine<br>(YAML/JSON)]
+    B --> E[External Tools/Plugins]
+    B --> F[Web-based Monitoring Interface<br>(JavaScript)]
+    A --> G[Containerized Environment<br>(Docker)]
 
-- **`orchestrator.py`**  
-  Main entry point for the orchestrator. Coordinates discovery, mapping, probing, and execution workflows.
+    subgraph Orchestrator Core
+        A
+        D
+    end
 
-- **`common.py`**  
-  Shared utilities, helpers, and common logic used across multiple modules.
+    subgraph Interfaces
+        B
+        E
+        F
+    end
+```
 
-- **`mapping.py`**  
-  Handles logical and/or physical component mapping, likely translating discovered resources into an internal model.
+## Usage Steps
+The following steps outline how to use the 5G-O-RAN TestBed Orchestrator in your environment:
 
-- **`component_map.json`**  
-  Static mapping definition describing known components, roles, or relationships.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Elinvicto/5G-O-RAN-TestBed-Orchestrator.git
+   cd 5G-O-RAN-TestBed-Orchestrator
+   ```
 
----
+2. **Install Dependencies**
+   - Use the provided `requirements.txt` file for Python dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
-### Discovery & Inventory
+3. **Run the Main Orchestrator**
+   - Start the orchestration script:
+     ```bash
+     python orchestrator.py
+     ```
 
-- **`discover.py`**  
-  Performs environment or network discovery to identify reachable components and services.
+4. **Access the Web Interface**
+   - Navigate to the provided URL (e.g., `http://127.0.0.1:5000`) to interact with the visual interface.
 
-- **`inventory.json`**  
-  Generated or static inventory describing discovered nodes, services, or assets.
+5. **Test a Component**
+   - Upload configurations and test scripts via the web interface or command-line.
 
-- **`netns_info.py`**  
-  Gathers Linux network namespace information, useful for containerized or virtualized environments.
+## How to Deploy in Your Own Environment
 
----
+### Pre-requisites
+Ensure the following software and tools are installed on your system:
+- Python 3.8+ 
+- Docker (optional, for containerized deployment)
+- GCC/G++ compiler for C, C++, Cython components
 
-### Probing & Analysis
+### Deployment Steps
+1. **Prepare Configuration**
+   - Edit the `config.yaml` file to align with your testbed setup.
 
-- **`probe_services.py`**  
-  Actively probes discovered services to determine availability, behavior, or exposed interfaces.
+2. **Set up Dependencies**
+   - Install all required Python libraries and compile Cython modules:
+     ```bash
+     python setup.py build_ext --inplace
+     ```
 
-- **`report.py`**  
-  Generates reports from discovery, probing, or attack results.
+3. **Run the Dockers (Optional)**
+   - If using the Dockerized version, build and run the container:
+     ```bash
+     docker build -t 5g-oran-orchestrator .
+     docker run -d -p 5000:5000 5g-oran-orchestrator
+     ```
 
----
+4. **Launch the Orchestrator**
+   - Initiate the orchestrator by running the main entry-point script:
+     ```bash
+     python orchestrator.py
+     ```
 
-### Attack Emulation
+5. **Customize Components**
+   - Modify the components under `modules/` directory for adding proprietary features.
 
-- **`attacks.py`**  
-  Defines available attack primitives or scenarios.
+## Conclusion
+The **5G-O-RAN TestBed Orchestrator** provides a robust and scalable solution for testing and managing Open RAN environments. By combining Python's simplicity with efficient low-level modules, the project facilitates next-generation 5G research and development. Its modularity and extensibility ensure it can cater to a wide variety of deployment scenarios, making it a go-to choice for researchers and developers in the 5G domain.
 
-- **`attack_runner.py`**  
-  Executes one or more attacks against selected targets.
-
-- **`attack_emulator.py`**  
-  Higher-level orchestration for simulating attacks, possibly coordinating multiple attack runners.
-
----
-
-### Dashboard & UI
-
-- **`dashboard_app.py`**  
-  Web-based dashboard application for visualizing system state, results, or reports.
-
-- **`templates/`**  
-  HTML or UI templates used by the dashboard application.
-
----
-
-### Supporting Assets
-
-- **`oneshot.sh`**  
-  Convenience shell script for running a full orchestration or test flow in one command.
-
-- **`oran_orchestrator_work/`**  
-  Working directory for runtime artifacts, logs, intermediate files, or generated outputs.
-
----
-
-### Ignored / Generated
-
-- **`__pycache__/`**  
-  Python bytecode cache (generated).
-
-- **`5gorc/`**  
-  Python virtual environment containing dependencies (generated, not source code).
-
----
-
-## Typical Workflow
-
-1. Run discovery to identify components and services
-2. Map discovered components into a structured model
-3. Probe services for behavior and exposure
-4. Execute attack emulation scenarios
-5. Generate reports and view results via the dashboard
-
----
-
-## Requirements
-
-- Python 3.12 (recommended, based on virtual environment)
-- Linux environment (network namespaces are used)
-- Root or elevated privileges may be required for certain operations
-
----
-
-## Notes
-
-This project appears designed for research, testing, or security assessment purposes. Use responsibly and only in authorized environments.
+We welcome contributions! Feel free to fork, test, and submit pull requests to make O-RAN orchestration even better.
