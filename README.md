@@ -25,44 +25,27 @@ The orchestrator is designed to support repeatable, parameterized experiments, e
   Allows new attack modules, metrics collectors, or control hooks (e.g., RIC/A1/O1 triggers) to be added with minimal changes.
 
 ## Technical Architecture
-The architecture of the **5G-O-RAN TestBed Orchestrator** can be broken down into the following core components:
+The architecture of the **5G-O-RAN TestBed Orchestrator** can be summarized as follows:
 
-### Technical Architecture Diagram (Orchestrated Adversarial Evaluation Framework)
+### Technical Architecture Diagram
 ```mermaid
 graph TD
-    A[Central Orchestrator Node]
-    A --> B[Attack Control Layer]
-    A --> C[Configuration & Campaign Engine]
-    A --> D[Telemetry and Metrics Collection Layer]
-    A --> E[Control Toggle Interface]
-    A --> F[Data Persistence Layer]
-    A --> G[RIC or Management Touchpoint]
-    G --> H[Threshold-Based Alarms]
-    G --> I[Closed-Loop Signaling]
-    A --> J[Analysis and Reporting Interface]
-
-    B --> B1[UE-Plane Attacks: Attach Flooding, RRC Storms, Traffic Bursts]
-    B --> B2[RAN-Plane Attacks: Scheduler Stress, Signaling Overload]
-    B --> B3[Core-Plane Attacks: AMF/UPF Overload, Session Anomalies]
-
-    C --> C1[Attack Type, Intensity, Duration, Concurrency]
-    C --> C2[Randomization Parameters]
-    C --> C3[Baseline vs Defense Modes]
-
-    D --> D1[CPU/Memory Usage]
-    D --> D2[Signaling Success/Failure Rates]
-    D --> D3[Throughput, Latency Metrics]
-
-    E --> E1[Transport Security: TLS]
-    E --> E2[Container-Level CPU/Memory Quotas]
-    E --> E3[Rate-Limiting, Admission Control]
-
-    F --> F1[Experiment Logs: CSV/Parquet]
-    F --> F2[Metadata: Campaign ID, Run Number, Config Hash]
-
-    J --> J1[Compute Metrics: E_sec, T_res, Recovery Lag]
-    J --> J2[Generate Figures, Tables]
+    A[Central Orchestrator Node] 
+    A --> B[Attack Scenarios]
+    A --> C[Configuration Engine]
+    A --> D[Telemetry Collection]
+    A --> E[Control Interface]
+    A --> F[Data Persistence]
+    A --> G[Reporting and Analysis]
 ```
+
+- **Central Orchestrator Node**: The main control logic that manages and coordinates all aspects of the testbed orchestration.
+- **Attack Scenarios**: Modular drivers to simulate realistic adversarial activity across UE, RAN, and Core layers.
+- **Configuration Engine**: Enables repeatable experiments with customizable attack parameters and modes.
+- **Telemetry Collection**: Collects and synchronizes system metrics for performance and resilience evaluation.
+- **Control Interface**: Adjusts security settings, quotas, and rate limits to enable controlled experiments.
+- **Data Persistence**: Stores all experiment data and metadata for downstream analysis.
+- **Reporting and Analysis**: Post-experiment tools to evaluate system resilience and generate usable results.
 
 ## Usage Steps
 The following steps outline how to use the 5G-O-RAN TestBed Orchestrator in your environment:
