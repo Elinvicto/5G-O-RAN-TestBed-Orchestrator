@@ -25,12 +25,12 @@ The architecture of the **5G-O-RAN TestBed Orchestrator** can be broken down int
 ### Technical Architecture Diagram
 ```mermaid
 graph TD
-    A[Orchestrator Core (Python)] --> B[API Endpoints (Modular Interfaces)]
-    A --> C[Low-level Performance Modules (C, Cython, C++, Fortran)]
-    A --> D[Configuration Engine (YAML/JSON)]
-    B --> E[External Tools/Plugins]
-    B --> F[Web-based Monitoring Interface (JavaScript)]
-    A --> G[Containerized Environment (Docker)]
+    A[Orchestrator Core Python] --> B[API Endpoints Modular Interfaces]
+    A --> C[Low-level Performance Modules C Cython C++ Fortran]
+    A --> D[Configuration Engine YAML JSON]
+    B --> E[External Tools Plugins]
+    B --> F[Web Monitoring Interface JavaScript]
+    A --> G[Containerized Environment Docker]
 
     subgraph Orchestrator_Core
         A
