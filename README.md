@@ -47,36 +47,18 @@ graph TD
 - **Data Persistence**: Stores all experiment data and metadata for downstream analysis.
 - **Reporting and Analysis**: Post-experiment tools to evaluate system resilience and generate usable results.
 
-## Docker Image: 5G Attack Orchestrator
+## Local Setup Instructions
 
-For users interested in pulling and using a Dockerized version of the **5G Attack Orchestrator**, you can pull the pre-built image from Docker Hub:
+To set up and run the **5G-O-RAN TestBed Orchestrator** locally:
 
-```bash
-docker pull badishsec/5g-orchestrator
-```
+### Pre-requisites
+You will need the following:
+- **Python 3.8+**
+- **Pip** (Python package manager)
+- **Linux Host** (for better compatibility with dependencies)
+- **External 5G Components** (e.g., Open5GS, OAI, or simulators)
 
-### Overview
-This Docker image provides a Python-based 5G security attack orchestrator and dashboard. It is designed to execute attack scripts and experiments against external 5G components such as Open5GS, OAI, or other simulated RAN/Core elements.
-
-The container offers:
-- A web-based dashboard
-- Scripted attack orchestration
-- Packet-level traffic generation using Scapy
-- A reproducible environment tailored for research experiments
-
-### Use Cases
-- UE flooding and signaling stress experiments
-- Security metric evaluation
-- Research artifact reproducibility
-- Control-plane testing for 5G vulnerabilities
-
-### Networking Notes
-- Use `--network host` for realistic 5G experiments.
-- Use `--cap-add=NET_ADMIN` for Scapy, raw sockets, and packet injection.
-
-## Usage Steps
-The following steps outline how to use the 5G-O-RAN TestBed Orchestrator in your environment:
-
+### Steps
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/Elinvicto/5G-O-RAN-TestBed-Orchestrator.git
@@ -84,60 +66,94 @@ The following steps outline how to use the 5G-O-RAN TestBed Orchestrator in your
    ```
 
 2. **Install Dependencies**
-   - Use the provided `requirements.txt` file for Python dependencies:
+   - Install all required Python libraries using the provided `requirements.txt` file:
      ```bash
      pip install -r requirements.txt
      ```
 
-3. **Run the Main Orchestrator**
-   - Start the orchestration script:
+3. **Run the Orchestrator**
+   - Begin the main orchestration process by running:
      ```bash
      python orchestrator.py
      ```
 
-4. **Access the Web Interface**
-   - Navigate to the provided URL (e.g., `http://127.0.0.1:5000`) to interact with the visual interface.
-
-5. **Test a Component**
-   - Upload configurations and test scripts via the web interface or command-line.
-
-## How to Deploy in Your Own Environment
-
-### Pre-requisites
-Ensure the following software and tools are installed on your system:
-- Python 3.8+ 
-- Docker (optional, for containerized deployment)
-- GCC/G++ compiler for C, C++, Cython components
-
-### Deployment Steps
-1. **Prepare Configuration**
-   - Edit the `config.yaml` file to align with your testbed setup.
-
-2. **Set up Dependencies**
-   - Install all required Python libraries and compile Cython modules:
-     ```bash
-     python setup.py build_ext --inplace
+4. **Access the Web Dashboard**
+   - Open your web browser and navigate to:
+     ```
+     http://127.0.0.1:5000
      ```
 
-3. **Run the Dockers (Optional)**
-   - If using the Dockerized version, build and run the container:
+5. **Customize Configuration**
+   - Edit the `inventory.json` file to define attack targets or tweak settings for UE, RAN, and Core components.
+
+6. **Run Attack Campaigns**
+   - Launch coordinated campaigns using `attack_runner.py`:
      ```bash
-     docker build -t 5g-oran-orchestrator .
-     docker run -d -p 5000:5000 5g-oran-orchestrator
+     python attack_runner.py
      ```
 
-4. **Launch the Orchestrator**
-   - Initiate the orchestrator by running the main entry-point script:
+## Docker Setup Instructions
+
+For users who prefer using Docker, a pre-built image is available for rapid deployment. This setup is ideal for reproducible research environments.
+
+### Steps
+
+1. **Pull the Docker Image**
+   - Pull the pre-built Docker image from Docker Hub:
      ```bash
-     python orchestrator.py
+     docker pull badishsec/5g-orchestrator
      ```
 
-5. **Customize Components**
-   - Modify the components under `modules/` directory for adding proprietary features.
+2. **Run the Web Dashboard**
+   - Start the Orchestrator in web-dashboard mode:
+     ```bash
+     docker run -it --rm \
+       --cap-add=NET_ADMIN \
+       --network host \
+       badishsec/5g-orchestrator
+     ```
+   - Access the dashboard at:
+     ```
+     http://localhost:5000
+     ```
+
+3. **Run Attack Runner (Standalone Script)**
+   - To execute an attack campaign standalone (without the dashboard), run:
+     ```bash
+     docker run -it --rm \
+       --cap-add=NET_ADMIN \
+       --network host \
+       badishsec/5g-orchestrator \
+       python attack_runner.py
+     ```
+
+4. **Run Attack Emulator**
+   - To perform low-level traffic generation or signaling stress, run:
+     ```bash
+     docker run -it --rm \
+       --cap-add=NET_ADMIN \
+       --network host \
+       badishsec/5g-orchestrator \
+       python attack_emulator.py
+     ```
+
+5. **Custom Scripts**
+   - Add your scripts to the container and run them like so:
+     ```bash
+     docker run -it --rm \
+       --cap-add=NET_ADMIN \
+       --network host \
+       badishsec/5g-orchestrator \
+       python my_experiment.py
+     ```
+
+### Networking Notes
+- Using `--network host` is recommended for realistic 5G experiments.
+- The `--cap-add=NET_ADMIN` flag is required for raw socket operations (e.g., Scapy).
 
 ## Conclusion
 The **5G-O-RAN TestBed Orchestrator** represents an innovative and robust framework for orchestrating adversarial campaigns in 5G O-RAN testbeds. This build is specifically compatible with the **NIST 5G O-RAN** infrastructure, making it ideal for researchers and developers working within this environment.
 
-By enabling repeatable, parameterized experiments and baseline comparisons, the orchestrator facilitates in-depth resilience testing and stress analysis of 5G O-RAN systems. With its modular and extensible design, it supports the addition of new attack modules, telemetry collectors, and control hooks for expanded use cases.
+With the option for both local setup and Dockerized deployments, the orchestrator is flexible and accessible for various research use cases, including reproducible security experiments, baseline comparisons, and stress testing. 
 
-We encourage contributions and collaboration! Feel free to fork the repository, test it out, and submit pull requests to enhance its functionality further. For users seeking convenience, the Docker image provides a ready-to-use environment for running experiments.
+We encourage contributions and collaboration! Feel free to fork the repository, test it out, and submit pull requests to enhance its functionality further. For those seeking convenience, the Docker image offers a ready-to-use environment to accelerate experimentation.
